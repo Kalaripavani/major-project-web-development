@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App With JavaScript</title>
+    <link rel="stylesheet" href="styles4.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="search-box">
+          <input
+            type="text"
+            placeholder="Enter your location"
+            class="input-box"
+            spellcheck="false"
+          />
+          <button class="fa-solid fa-magnifying-glass" id="searchBtn"></button>
+        </div>
+      </div>
+      <div class="location-not-found">
+        <h1>Sorry, Location not found!!!</h1>
+        <img src="pictures/404-error.png" alt="404 Error" />
+      </div>
+      <div class="weather-body">
+        <img
+          src="/pictures/cloudy.png"
+          alt="Weather Image"
+          class="weather-img"
+          style="align-items: center; width: 200px; height: 200px"
+        />
+        <div>
+          <h1 class="city" style="text-align: center; color: white">
+            City Name
+          </h1>
+        </div>
+        <div class="weather-box">
+          <p class="date" id="date">Tuesday July 25, 2023</p>
+          <br />
+          <p class="temperature">0 <sup>°C</sup></p>
+          <p class="description">light rain</p>
+        </div>
+        <div class="weather-details">
+          <div class="humidity">
+            <i class="fa-sharp fa-solid fa-droplet"></i>
+            <div class="text">
+              <span id="humidity">45%</span>
+              <p>Humidity</p>
+            </div>
+          </div>
+          <div class="wind">
+            <i class="fa-solid fa-wind"></i>
+            <div class="text">
+              <span id="wind-speed">12Km/H</span>
+              <p>Wind Speed</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="table-container">
+        <h2>Weather Forecast</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Temperature (°C)</th>
+              <th>Wind Speed (Km/H)</th>
+              <th>Humidity (%)</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody id="forecastTableBody">
+            <!-- Rows will be added dynamically here -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="script1.js"></script>
+    <script
+      src="https://kit.fontawesome.com/595a890311.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
